@@ -12,5 +12,8 @@
 
 void* operator new(size_t size);
 
+/**
+ * If the given pointer is not NULL, free it.
+ */
 void operator delete(void* ptr);
 
