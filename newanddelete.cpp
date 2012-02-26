@@ -1,3 +1,4 @@
+#ifndef ARDUINO || ARDUINO < 100
 #include "newanddelete.h"
 
 void* operator new(size_t size) {
@@ -10,3 +11,4 @@ void operator delete(void* ptr) {
 	}
 }
 
+#endif

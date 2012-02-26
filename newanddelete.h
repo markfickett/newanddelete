@@ -1,4 +1,6 @@
 #pragma once
+// Arduino 1.0 defines new and delete.
+#ifndef ARDUINO || ARDUINO < 100
 
 // for size_t, malloc, and free
 #include <stdlib.h>
@@ -9,7 +11,6 @@
  * (Dynamic allocation on microcontrollers is generally discouraged, as it
  * uses some memory overhead in a limited space. Prefer static allocation.)
  */
-
 void* operator new(size_t size);
 
 /**
@@ -17,3 +18,4 @@ void* operator new(size_t size);
  */
 void operator delete(void* ptr);
 
+#endif
